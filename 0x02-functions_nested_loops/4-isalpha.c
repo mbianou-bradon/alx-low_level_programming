@@ -1,4 +1,4 @@
-#include "putchar.c"
+#include "main.h"
 
 /**
  * _isalpha - checks for alphabetic character
