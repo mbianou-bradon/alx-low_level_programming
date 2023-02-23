@@ -2,13 +2,13 @@
 
 /**
  * mul: multiply two numbers
- * @i: first integer
- * @y: second integer
+ * @a: first integer
+ * @b: second integer
  *
  * Return: result (product of two integers)
  */
 
-int mul(int i, int y)
+int mul(int a, int b)
 {
-	return (i * y);
+	return (a * b);
 }
