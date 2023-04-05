@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
-* listint_len - Function that returns number of elements in a linked list.
+* listint_len - number of elements in a linked list.
 * @h : point to node
+*
 * Return: Number of elements
 */
 
