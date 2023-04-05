@@ -1,36 +1,40 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
-* add_nodeint_end - Function that adds a new node at the end of a list.
-* @head : pointer to head
-* @n : integer
-* Return: Address of new element, or NULL if it failed
-*/
+ * add_nodeint_end - add a new node at the end
+ * of a linked list
+ * @head: head of a list.
+ * @n: n element.
+ *
+ * Return: address of the new element. NUll if it failed.
+ */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *new;
-	listint_t *aux;
+	listint_t *temp;
+
+	(void)temp;
 
 	new = malloc(sizeof(listint_t));
+
 	if (new == NULL)
 		return (NULL);
 
-	aux = *head;
 	new->n = n;
 	new->next = NULL;
+	temp = *head;
 	if (*head == NULL)
 	{
 		*head = new;
 	}
 	else
 	{
-		while (aux->next != NULL)
-			aux = aux->next;
-
-		aux->next = new;
+		while (temp->next != NULL)
+		{
+			temp = temp->next;
+		}
+		temp->next = new;
 	}
 
-	return (new);
+	return (*head);
 }
