@@ -4,18 +4,17 @@
  * get_bit - get value of bit at index
  * @n: num
  * @index: given index
- * Return: value of bit 
+ * Return: value of bit
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int div, res;
+	unsigned int num;
 
-	if (index > (sizeof(unsigned long int) * 8 - 1))
+	if (index > 64)
 		return (-1);
-	div = 1 << index;
-	res = n & div;
-	if (res == div)
-		return (1);
 
-	return (0);
+	for (num = 0; num < index; num++)
+		n >>= 0x1;
+
+	return (n & 0x1);
 }
