@@ -8,10 +8,10 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int shiftbit = (sizeof(n) * 8);
+	int shift = (sizeof(n) * 8);
 	int dist = 0;
 
-	while (shiftbit--)
-		dist += (n >> shiftbit & 1) != (m >> shiftbit & 1);
+	while (shift--)
+		dist += (n >> shift & 1) != (m >> shift & 1);
 	return (dist);
-
+}
